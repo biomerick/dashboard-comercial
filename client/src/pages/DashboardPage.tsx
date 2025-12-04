@@ -56,7 +56,7 @@ const DashboardPage: React.FC = () => {
       {/* KPIs Section */}
       <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
         <Col xs={24} sm={12} md={6}>
-          <Card bordered={false}>
+          <Card variant="borderless">
             <Statistic
               title="Total Ventas"
               value={112893}
@@ -68,7 +68,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Col>
         <Col xs={24} sm={12} md={6}>
-          <Card bordered={false}>
+          <Card variant="borderless">
             <Statistic
               title="Leads Activos"
               value={93}
@@ -78,7 +78,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Col>
         <Col xs={24} sm={12} md={6}>
-          <Card bordered={false}>
+          <Card variant="borderless">
             <Statistic
               title="Nuevos Clientes"
               value={1128}
@@ -88,7 +88,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Col>
         <Col xs={24} sm={12} md={6}>
-          <Card bordered={false}>
+          <Card variant="borderless">
             <Statistic
               title="Tasa de Conversión"
               value={9.3}
@@ -103,7 +103,7 @@ const DashboardPage: React.FC = () => {
       {/* Main Section */}
       <Row gutter={[16, 16]}>
         <Col xs={24} lg={16}>
-          <Card title="Leads por Campaña" bordered={false} style={{ height: '100%' }}>
+          <Card title="Leads por Campaña" variant="borderless" style={{ height: '100%' }}>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
@@ -117,7 +117,7 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Col>
         <Col xs={24} lg={8}>
-          <Card title="Últimas Campañas" bordered={false} style={{ height: '100%' }}>
+          <Card title="Últimas Campañas" variant="borderless" style={{ height: '100%' }}>
             <Table 
               columns={columns} 
               dataSource={tableData} 
