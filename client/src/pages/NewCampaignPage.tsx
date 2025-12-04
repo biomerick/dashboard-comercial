@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Steps, Button, message, Form, Input, Select, Card, Typography, Descriptions, Space } from 'antd';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+import ReactQuill from 'react-quill-new';
+import 'react-quill-new/dist/quill.snow.css';
 import { useNavigate } from 'react-router-dom';
 
 const { Title } = Typography;
