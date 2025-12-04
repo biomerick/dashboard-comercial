@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Steps, Button, message, Form, Input, Select, Card, Typography, Descriptions, Space, Spin } from 'antd';
+import { Steps, Button, App, Form, Input, Select, Card, Typography, Descriptions, Space, Spin } from 'antd';
 import { Sparkles, ArrowLeft, ArrowRight, Rocket, CheckCircle } from 'lucide-react';
 import ReactQuill from 'react-quill-new';
 import 'react-quill-new/dist/quill.snow.css';
@@ -17,6 +17,7 @@ const NewCampaignPage: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [form] = Form.useForm();
   const navigate = useNavigate();
+  const { message } = App.useApp();
   
   // Estados para lógica de negocio
   const [selectedVertical, setSelectedVertical] = useState<string | null>(null);
@@ -221,7 +222,7 @@ const NewCampaignPage: React.FC = () => {
 
         return (
           <div style={{ maxWidth: 800, margin: '0 auto' }}>
-            <Descriptions title="Resumen de Campaña" bordered column={1} labelStyle={{ width: '200px', fontWeight: 'bold' }}>
+            <Descriptions title="Resumen de Campaña" bordered column={1} styles={{ label: { width: '200px', fontWeight: 'bold' } }}>
               <Descriptions.Item label="Nombre">{campaignData.name}</Descriptions.Item>
               <Descriptions.Item label="Vertical">{verticalLabel}</Descriptions.Item>
               <Descriptions.Item label="Producto">{productLabel}</Descriptions.Item>
