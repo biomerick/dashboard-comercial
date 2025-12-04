@@ -17,7 +17,7 @@ const MainLayout: React.FC = () => {
       label: 'Dashboard',
     },
     {
-      key: '/campaigns',
+      key: '/campaigns/new',
       icon: <MailOutlined />,
       label: 'Campañas',
     },

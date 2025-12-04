@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import DashboardPage from './pages/DashboardPage';
+import NewCampaignPage from './pages/NewCampaignPage';
+import 'react-quill/dist/quill.snow.css';
 
 const App: React.FC = () => {
   return (
@@ -9,7 +11,8 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<DashboardPage />} />
-          <Route path="campaigns" element={<div>Página de Campañas (En construcción)</div>} />
+          <Route path="campaigns" element={<Navigate to="/campaigns/new" replace />} />
+          <Route path="campaigns/new" element={<NewCampaignPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
